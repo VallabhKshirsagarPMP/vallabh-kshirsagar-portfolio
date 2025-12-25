@@ -91,11 +91,23 @@
   margin: 12px 0 20px 0;
 }
 
+.badges a {
+  display: inline-block;
+}
+
 .badges img {
   height: 48px;
   width: 48px;
   object-fit: contain;
+  opacity: 0.95;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
+
+.badges img:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
 
 
 
@@ -115,10 +127,25 @@
   MBA | PMP® | CSM® | CSPO®
 </p>
 <div class="badges">
-  <img src="pmp-badge.png" alt="PMP Certification Badge">
-  <img src="csm-badge.png" alt="CSM Certification Badge">
-  <img src="cspo-badge.png" alt="CSPO Certification Badge">
+  <a href="https://www.pmi.org/certifications/project-management-pmp" 
+     target="_blank" 
+     title="PMP® Certified">
+    <img src="pmp-badge.png" alt="PMP Certification Badge">
+  </a>
+
+  <a href="https://www.scrumalliance.org/get-certified/scrummaster" 
+     target="_blank" 
+     title="Certified ScrumMaster®">
+    <img src="csm-badge.png" alt="CSM Certification Badge">
+  </a>
+
+  <a href="https://www.scrumalliance.org/get-certified/product-owner-track/certified-scrum-product-owner" 
+     target="_blank" 
+     title="Certified Scrum Product Owner®">
+    <img src="cspo-badge.png" alt="CSPO Certification Badge">
+  </a>
 </div>
+
 
 <p class="tagline">
   Project and delivery leader focused on clarity, accountability,
