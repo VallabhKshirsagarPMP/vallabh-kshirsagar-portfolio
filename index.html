@@ -13,11 +13,16 @@
       color: #222;
     }
 
-    img {
-      border-radius: 50%;
-      display: block;
-      margin-bottom: 20px;
-    }
+    .profile-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 20px auto;
+  border: 4px solid #0b3c5d;
+}
+
 
     h1 {
       margin-bottom: 5px;
@@ -53,7 +58,7 @@
 <div class="container">
 
     <!-- HERO -->
-    <img src="profile.jpg.jpeg" alt="Vallabh Kshirsagar" width="150">
+    <img src="profile.jpg.jpeg" alt="Vallabh Kshirsagar" class="profile-photo">
     <h1>Vallabh Kshirsagar</h1>
     <h2>Senior Consultant – AI & Data | PMP | CSM® | CSPO®</h2>
 
