@@ -6,10 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO -->
-  <meta name="description" content="Vallabh Kshirsagar is a senior project and delivery leader with experience across Agile, AI & Data, GxP-regulated environments, and enterprise transformation." />
-  <meta name="keywords" content="Project Manager, Delivery Leadership, PMP, Agile, Scrum, Deloitte, AI & Data, GxP, PMO, Jira, Azure DevOps" />
+  <meta name="description" content="Vallabh Kshirsagar is a senior project and delivery leader experienced in Agile, AI & Data, GxP environments, PMO governance, and enterprise transformation." />
 
-  <!-- GA4 -->
+  <!-- GA4 (placeholder) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -18,7 +17,7 @@
     gtag('config', 'G-XXXXXXXXXX');
   </script>
 
-  <!-- Google Ads -->
+  <!-- Google Ads (placeholder) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
   <script>
     gtag('config', 'AW-XXXXXXXXXX');
@@ -31,6 +30,7 @@
 
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
       font-family: 'Inter', system-ui, sans-serif;
       background: #f4f6fb;
@@ -38,17 +38,32 @@
       line-height: 1.65;
     }
 
-    /* HERO */
-    .hero {
+    /* LAYOUT */
+    .layout {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 32px;
+      padding: 40px 20px 140px;
+    }
+
+    /* LEFT PANE */
+    .sidebar {
       background: #ffffff;
-      padding: 64px 20px 48px;
+      border-radius: 18px;
+      padding: 36px 28px;
+      box-shadow: 0 14px 34px rgba(0,0,0,0.12);
+      position: sticky;
+      top: 32px;
+      height: fit-content;
       text-align: center;
       animation: fadeIn 0.6s ease;
     }
 
-    .hero-photo {
-      width: 190px;
-      height: 190px;
+    .profile-photo {
+      width: 170px;
+      height: 170px;
       border-radius: 50%;
       border: 4px solid #0b3c5d;
       object-fit: contain;
@@ -56,9 +71,8 @@
       margin-bottom: 16px;
     }
 
-    .hero h1 {
-      font-size: 2rem;
-      font-weight: 700;
+    .sidebar h1 {
+      font-size: 1.6rem;
       color: #0b3c5d;
       margin-bottom: 6px;
     }
@@ -66,19 +80,19 @@
     .credentials {
       font-weight: 600;
       color: #0b3c5d;
-      margin-bottom: 10px;
+      margin-bottom: 14px;
+      font-size: 0.95rem;
     }
 
     .badges {
       display: flex;
       justify-content: center;
-      gap: 14px;
-      margin-bottom: 14px;
+      gap: 12px;
     }
 
     .badges img {
-      width: 46px;
-      height: 46px;
+      width: 44px;
+      height: 44px;
       transition: transform 0.2s ease;
     }
 
@@ -86,26 +100,17 @@
       transform: translateY(-3px);
     }
 
-    .hero p {
-      max-width: 680px;
-      margin: 0 auto;
-      font-size: 1.05rem;
-      color: #374151;
+    /* RIGHT PANE */
+    .content {
+      animation: slideUp 0.5s ease;
     }
 
     /* TABS */
     .tabs {
-      background: #e9edf3;
-      box-shadow: inset 0 -1px 0 #d1d5db;
-    }
-
-    .tabs-inner {
-      max-width: 1100px;
-      margin: 0 auto;
       display: flex;
-      justify-content: center;
-      gap: 10px;
-      padding: 14px;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-bottom: 24px;
       flex-wrap: wrap;
     }
 
@@ -113,7 +118,7 @@
       padding: 12px 22px;
       font-weight: 600;
       font-size: 0.9rem;
-      background: #f4f6fb;
+      background: #e9edf3;
       border: 1px solid #d1d5db;
       border-radius: 999px;
       cursor: pointer;
@@ -133,27 +138,21 @@
       transform: translateY(-2px);
     }
 
-    /* CONTENT */
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 48px 20px 160px;
-    }
-
+    /* PANELS */
     .tab-content {
       display: none;
-      animation: slideUp 0.35s ease;
     }
 
     .tab-content.active {
       display: block;
+      animation: fadeIn 0.4s ease;
     }
 
     .panel {
       background: #ffffff;
-      border-radius: 16px;
-      padding: 40px;
-      box-shadow: 0 14px 34px rgba(0,0,0,0.1);
+      border-radius: 18px;
+      padding: 42px;
+      box-shadow: 0 14px 34px rgba(0,0,0,0.12);
       margin-bottom: 32px;
     }
 
@@ -162,17 +161,18 @@
       margin-bottom: 18px;
     }
 
+    /* ABOUT TILES */
     .tiles {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-      margin-top: 20px;
+      gap: 20px;
+      margin-top: 24px;
     }
 
     .tile {
       background: linear-gradient(135deg, #f8fafc, #ffffff);
-      border-radius: 14px;
-      padding: 26px;
+      border-radius: 16px;
+      padding: 28px;
       box-shadow: 0 10px 22px rgba(0,0,0,0.12);
       text-align: center;
     }
@@ -240,7 +240,7 @@
     }
 
     .footer-inner {
-      max-width: 1100px;
+      max-width: 1300px;
       margin: 0 auto;
       padding: 14px 20px;
       display: flex;
@@ -263,150 +263,137 @@
       cursor: pointer;
     }
 
-    /* MODAL */
-    .overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.5);
-      z-index: 2000;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .modal {
-      background: #ffffff;
-      padding: 32px;
-      border-radius: 14px;
-      width: 90%;
-      max-width: 420px;
-    }
-
+    /* ANIMATIONS */
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     @keyframes slideUp { from { opacity: 0; transform: translateY(10px);} to { opacity: 1; transform: translateY(0);} }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        position: relative;
+        top: 0;
+      }
+      .tabs {
+        justify-content: center;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-<section class="hero">
-  <img src="profile.jpg" alt="Vallabh Kshirsagar" class="hero-photo">
-  <h1>Vallabh Kshirsagar</h1>
-  <div class="credentials">MBA | PMP® | CSM® | CSPO®</div>
-  <div class="badges">
-    <img src="pmp-badge.png" alt="PMP">
-    <img src="csm-badge.png" alt="CSM">
-    <img src="cspo-badge.png" alt="CSPO">
-  </div>
-  <p>
-    Project and delivery leader focused on clarity, accountability,
-    and predictable outcomes across complex, high-impact initiatives.
-  </p>
-</section>
+<div class="layout">
 
-<nav class="tabs">
-  <div class="tabs-inner">
-    <div class="tab-btn active" data-tab="about">About Me</div>
-    <div class="tab-btn" data-tab="resume">Resume</div>
-    <div class="tab-btn" data-tab="newsletter">Newsletter</div>
-    <div class="tab-btn" data-tab="contact">Contact</div>
-  </div>
-</nav>
-
-<main>
-  <!-- ABOUT -->
-  <div id="about" class="tab-content active">
-    <div class="panel">
-      <h2>About Me</h2>
-      <p>
-        Senior Project & Delivery Leader with experience across Agile, Hybrid,
-        AI & Data programs, GxP-regulated environments, PMO governance,
-        and enterprise transformation.
-      </p>
-      <div class="tiles">
-        <div class="tile"><strong>8+</strong>Years Experience</div>
-        <div class="tile"><strong>25+</strong>Projects Delivered</div>
-        <div class="tile"><strong>Multi-Industry</strong>Healthcare, Manufacturing, Telecom</div>
-        <div class="tile"><strong>AI & Data</strong>Enterprise Programs</div>
-      </div>
+  <!-- LEFT PROFILE -->
+  <aside class="sidebar">
+    <img src="profile.jpg" alt="Vallabh Kshirsagar" class="profile-photo">
+    <h1>Vallabh Kshirsagar</h1>
+    <div class="credentials">MBA | PMP® | CSM® | CSPO®</div>
+    <div class="badges">
+      <img src="pmp-badge.png" alt="PMP">
+      <img src="csm-badge.png" alt="CSM">
+      <img src="cspo-badge.png" alt="CSPO">
     </div>
-  </div>
+  </aside>
 
-  <!-- RESUME -->
-  <div id="resume" class="tab-content">
-    <div class="panel">
-      <h2>Resume Snapshot</h2>
-      <p><strong>Certifications:</strong> PMP®, CSM®, CSPO®, Lean Six Sigma Green Belt, Azure Fundamentals</p>
-      <p><strong>Tools:</strong> Jira, Confluence, Azure DevOps, MS Project, Power BI, Excel</p>
-      <p><strong>Methods:</strong> Agile, Scrum, Hybrid, Waterfall, PMO Governance</p>
-      <p><strong>Education:</strong> MBA – MIT WPU Pune | B.E. Mechanical – University of Pune</p>
-    </div>
-  </div>
+  <!-- RIGHT CONTENT -->
+  <section class="content">
 
-  <!-- NEWSLETTER -->
-  <div id="newsletter" class="tab-content">
-    <div class="panel">
-      <h2>Newsletter</h2>
-      <div class="newsletter-grid">
-        <div class="newsletter-card">
-          <h4>Why Busy Teams Still Miss Outcomes</h4>
-          <p>Activity vs ownership in delivery systems.</p>
-          <a href="#">Read →</a>
-        </div>
-        <div class="newsletter-card">
-          <h4>Clarity Is a Leadership Decision</h4>
-          <p>How ambiguity is often a choice.</p>
-          <a href="#">Read →</a>
-        </div>
-        <div class="newsletter-card">
-          <h4>Predictability Beats Speed</h4>
-          <p>Why stable systems outperform heroics.</p>
-          <a href="#">Read →</a>
+    <!-- TABS -->
+    <nav class="tabs">
+      <div class="tab-btn active" data-tab="about">About Me</div>
+      <div class="tab-btn" data-tab="resume">Resume</div>
+      <div class="tab-btn" data-tab="newsletter">Newsletter</div>
+      <div class="tab-btn" data-tab="contact">Contact</div>
+    </nav>
+
+    <!-- ABOUT -->
+    <div id="about" class="tab-content active">
+      <div class="panel">
+        <h2>About Me</h2>
+        <p>
+          Senior Project & Delivery Leader with experience across Agile, Hybrid,
+          AI & Data programs, GxP-regulated environments, PMO governance,
+          and enterprise transformation.
+        </p>
+        <div class="tiles">
+          <div class="tile"><strong>8+</strong>Years Experience</div>
+          <div class="tile"><strong>25+</strong>Projects Delivered</div>
+          <div class="tile"><strong>Multi-Industry</strong>Healthcare, Manufacturing, Telecom</div>
+          <div class="tile"><strong>AI & Data</strong>Enterprise Programs</div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- CONTACT -->
-  <div id="contact" class="tab-content">
-    <div class="panel">
-      <h2>Contact</h2>
-      <div class="contact-grid">
-        <iframe src="https://maps.google.com/maps?q=Pune%2C%20India&t=&z=11&ie=UTF8&iwloc=&output=embed"></iframe>
-        <div>
-          <p><strong>Email:</strong> kshirsagarvallabh09@gmail.com</p>
-          <p><strong>Phone:</strong> +91 99239 70963</p>
-          <p><strong>Book a Meeting:</strong> (link coming soon)</p>
-          <hr>
-          <p>
-            Need guidance on PMP® or Agile certifications, resources,
-            or study strategy? Feel free to reach out or book a meeting.
-          </p>
+    <!-- RESUME -->
+    <div id="resume" class="tab-content">
+      <div class="panel">
+        <h2>Resume Snapshot</h2>
+        <p><strong>Certifications:</strong> PMP®, CSM®, CSPO®, Lean Six Sigma Green Belt, Azure Fundamentals</p>
+        <p><strong>Tools:</strong> Jira, Confluence, Azure DevOps, MS Project, Power BI, Excel</p>
+        <p><strong>Methods:</strong> Agile, Scrum, Hybrid, Waterfall, PMO Governance</p>
+        <p><strong>Education:</strong> MBA – MIT WPU Pune | B.E. Mechanical – University of Pune</p>
+      </div>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div id="newsletter" class="tab-content">
+      <div class="panel">
+        <h2>Newsletter</h2>
+        <div class="newsletter-grid">
+          <div class="newsletter-card">
+            <h4>Why Busy Teams Still Miss Outcomes</h4>
+            <p>Activity vs ownership in delivery systems.</p>
+            <a href="#">Read →</a>
+          </div>
+          <div class="newsletter-card">
+            <h4>Clarity Is a Leadership Decision</h4>
+            <p>How ambiguity is often a choice.</p>
+            <a href="#">Read →</a>
+          </div>
+          <div class="newsletter-card">
+            <h4>Predictability Beats Speed</h4>
+            <p>Why stable systems outperform heroics.</p>
+            <a href="#">Read →</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</main>
+
+    <!-- CONTACT -->
+    <div id="contact" class="tab-content">
+      <div class="panel">
+        <h2>Contact</h2>
+        <div class="contact-grid">
+          <iframe src="https://maps.google.com/maps?q=Pune%2C%20India&t=&z=11&ie=UTF8&iwloc=&output=embed"></iframe>
+          <div>
+            <p><strong>Email:</strong> kshirsagarvallabh09@gmail.com</p>
+            <p><strong>Phone:</strong> +91 99239 70963</p>
+            <p><strong>Book a Meeting:</strong> (link coming soon)</p>
+            <hr>
+            <p>
+              Need guidance on PMP® or Agile certifications, resources,
+              or study strategy? Feel free to reach out or book a meeting.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</div>
 
 <footer>
   <div class="footer-inner">
     <div class="cta" onclick="window.open('https://www.linkedin.com','_blank')">
       Connect on LinkedIn
     </div>
-    <div class="feedback" onclick="document.getElementById('feedbackModal').style.display='flex'">
-      Send feedback
-    </div>
+    <div class="feedback">Send feedback</div>
   </div>
 </footer>
-
-<div class="overlay" id="feedbackModal">
-  <div class="modal">
-    <h3>Send feedback</h3>
-    <input type="text" placeholder="Your name">
-    <textarea rows="4" placeholder="Your feedback"></textarea>
-    <button onclick="document.getElementById('feedbackModal').style.display='none'">Submit</button>
-  </div>
-</div>
 
 <script>
   document.querySelectorAll('.tab-btn').forEach(btn => {
