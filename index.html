@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Vallabh Kshirsagar | Professional Website</title>
+  <title>Vallabh Kshirsagar | Project & Delivery Leadership</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <meta name="description" content="Vallabh Kshirsagar is a senior project and delivery leader at Deloitte, focused on execution discipline, stakeholder alignment, and predictable outcomes across complex initiatives." />
+  <meta name="keywords" content="Project Manager, Delivery Leadership, Deloitte, Agile, AI & Data, GxP, PMP, Scrum, Leadership Newsletter" />
 
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,7 +15,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    /* ---------------- RESET ---------------- */
     * {
       margin: 0;
       padding: 0;
@@ -25,12 +28,6 @@
       line-height: 1.6;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* ---------------- LAYOUT ---------------- */
     header {
       position: sticky;
       top: 0;
@@ -44,18 +41,13 @@
       margin: 0 auto;
       padding: 16px 20px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-    }
-
-    .brand {
       font-weight: 700;
-      font-size: 1rem;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.04em;
       color: #0b3c5d;
     }
 
-    /* ---------------- HERO ---------------- */
+    /* HERO */
     .hero {
       background: #ffffff;
       padding: 64px 20px 48px;
@@ -83,13 +75,13 @@
     }
 
     .hero p {
-      max-width: 600px;
+      max-width: 640px;
       margin: 0 auto;
       font-size: 1.05rem;
       color: #374151;
     }
 
-    /* ---------------- TABS ---------------- */
+    /* TABS */
     .tabs {
       background: linear-gradient(135deg, #0b3c5d, #1e5a87);
     }
@@ -114,15 +106,15 @@
     }
 
     .tab-btn.active {
-      background: rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.18);
       color: #ffffff;
     }
 
-    /* ---------------- CONTENT PANELS ---------------- */
+    /* CONTENT */
     main {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 48px 20px 120px;
+      padding: 48px 20px 140px;
     }
 
     .tab-content {
@@ -141,12 +133,29 @@
       box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
     }
 
+    .panel h2 {
+      color: #0b3c5d;
+      margin-bottom: 16px;
+    }
+
+    .panel p {
+      margin-bottom: 14px;
+    }
+
+    .panel ul {
+      padding-left: 18px;
+    }
+
+    .panel li {
+      margin-bottom: 10px;
+    }
+
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(6px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* ---------------- FOOTER ---------------- */
+    /* FOOTER */
     footer {
       position: fixed;
       bottom: 0;
@@ -168,7 +177,7 @@
     }
 
     .footer-cta {
-      padding: 10px 18px;
+      padding: 10px 20px;
       background: #0b3c5d;
       color: #ffffff;
       border-radius: 999px;
@@ -184,7 +193,7 @@
       cursor: pointer;
     }
 
-    /* ---------------- FEEDBACK MODAL ---------------- */
+    /* FEEDBACK MODAL */
     .modal-overlay {
       display: none;
       position: fixed;
@@ -227,101 +236,144 @@
       font-weight: 600;
       cursor: pointer;
     }
-
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="header-inner">
-      <div class="brand">VALLABH KSHIRSAGAR</div>
-    </div>
-  </header>
+<header>
+  <div class="header-inner">
+    VALLABH KSHIRSAGAR
+  </div>
+</header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="hero-photo"></div>
-      <h1>Professional Identity</h1>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-photo"></div>
+    <h1>Project & Delivery Leadership</h1>
+    <p>
+      I lead complex initiatives where clarity, accountability,
+      and predictable outcomes matter more than activity.
+    </p>
+  </div>
+</section>
+
+<nav class="tabs">
+  <div class="tabs-inner">
+    <div class="tab-btn active" data-tab="about">About Me</div>
+    <div class="tab-btn" data-tab="resume">Resume</div>
+    <div class="tab-btn" data-tab="services">Services</div>
+    <div class="tab-btn" data-tab="newsletter">Newsletter</div>
+    <div class="tab-btn" data-tab="contact">Contact</div>
+  </div>
+</nav>
+
+<main>
+  <div id="about" class="tab-content active">
+    <div class="panel">
+      <h2>About Me</h2>
       <p>
-        This is a placeholder hero statement. Content will evolve later.
+        I am a senior project and delivery leader with <strong>Deloitte</strong>,
+        supporting complex AI & Data and enterprise transformation initiatives.
       </p>
-    </div>
-  </section>
-
-  <!-- TABS -->
-  <nav class="tabs">
-    <div class="tabs-inner">
-      <div class="tab-btn active" data-tab="about">About Me</div>
-      <div class="tab-btn" data-tab="resume">Resume</div>
-      <div class="tab-btn" data-tab="services">Services</div>
-      <div class="tab-btn" data-tab="newsletter">Newsletter</div>
-      <div class="tab-btn" data-tab="contact">Contact</div>
-    </div>
-  </nav>
-
-  <!-- CONTENT -->
-  <main>
-    <div id="about" class="tab-content active">
-      <div class="panel">About Me content placeholder</div>
-    </div>
-
-    <div id="resume" class="tab-content">
-      <div class="panel">Resume content placeholder</div>
-    </div>
-
-    <div id="services" class="tab-content">
-      <div class="panel">Services content placeholder</div>
-    </div>
-
-    <div id="newsletter" class="tab-content">
-      <div class="panel">Newsletter content placeholder</div>
-    </div>
-
-    <div id="contact" class="tab-content">
-      <div class="panel">Contact content placeholder</div>
-    </div>
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-cta">Connect on LinkedIn</div>
-      <div class="feedback-btn" id="openFeedback">Send feedback</div>
-    </div>
-  </footer>
-
-  <!-- FEEDBACK MODAL -->
-  <div class="modal-overlay" id="feedbackModal">
-    <div class="modal">
-      <h3>Send feedback</h3>
-      <input type="text" placeholder="Your name" />
-      <textarea rows="4" placeholder="Your feedback"></textarea>
-      <button id="closeFeedback">Submit</button>
+      <p>
+        My work focuses on execution discipline, stakeholder alignment,
+        and delivery predictability in environments where delivery risk is real.
+      </p>
+      <p>
+        Backed by PMP®, CSM®, and CSPO® certifications, I apply Agile and hybrid
+        delivery models pragmatically—based on context, constraints, and outcomes.
+      </p>
     </div>
   </div>
 
-  <!-- JS -->
-  <script>
-    // Tabs
-    document.querySelectorAll('.tab-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  <div id="resume" class="tab-content">
+    <div class="panel">
+      <h2>Resume</h2>
+      <ul>
+        <li>Senior Consultant – AI & Data, Deloitte</li>
+        <li>Senior Project Manager – GxP & Regulated Platforms</li>
+        <li>Portfolio delivery across enterprise and startup environments</li>
+        <li>Strong governance, reporting, and stakeholder leadership</li>
+      </ul>
+      <p>
+        A downloadable resume / PDF can be linked here later.
+      </p>
+    </div>
+  </div>
 
-        btn.classList.add('active');
-        document.getElementById(btn.dataset.tab).classList.add('active');
-      });
+  <div id="services" class="tab-content">
+    <div class="panel">
+      <h2>Services</h2>
+      <ul>
+        <li>Project & Program Delivery Leadership</li>
+        <li>PMO & Governance Setup</li>
+        <li>Agile / Hybrid Delivery Advisory</li>
+        <li>Delivery Stabilization & Risk Recovery</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="newsletter" class="tab-content">
+    <div class="panel">
+      <h2>Newsletter</h2>
+      <p>
+        I write about delivery leadership, execution discipline,
+        and decision-making in complex environments.
+      </p>
+      <ul>
+        <li>Why Busy Teams Still Miss Outcomes</li>
+        <li>Clarity Is a Leadership Decision</li>
+        <li>Predictability Beats Speed</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="contact" class="tab-content">
+    <div class="panel">
+      <h2>Contact</h2>
+      <p>
+        The preferred way to connect is via LinkedIn.
+      </p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-cta" onclick="window.open('https://www.linkedin.com','_blank')">
+      Connect on LinkedIn
+    </div>
+    <div class="feedback-btn" id="openFeedback">
+      Send feedback
+    </div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="feedbackModal">
+  <div class="modal">
+    <h3>Send feedback</h3>
+    <input type="text" placeholder="Your name" />
+    <textarea rows="4" placeholder="Your feedback"></textarea>
+    <button id="closeFeedback">Submit</button>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
     });
+  });
 
-    // Feedback modal
-    const modal = document.getElementById('feedbackModal');
-    document.getElementById('openFeedback').onclick = () => modal.style.display = 'flex';
-    document.getElementById('closeFeedback').onclick = () => modal.style.display = 'none';
-    modal.onclick = e => { if (e.target === modal) modal.style.display = 'none'; };
-  </script>
+  const modal = document.getElementById('feedbackModal');
+  document.getElementById('openFeedback').onclick = () => modal.style.display = 'flex';
+  document.getElementById('closeFeedback').onclick = () => modal.style.display = 'none';
+  modal.onclick = e => { if (e.target === modal) modal.style.display = 'none'; };
+</script>
 
 </body>
 </html>
