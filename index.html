@@ -7,7 +7,7 @@
 
   <!-- SEO -->
   <meta name="description" content="Vallabh Kshirsagar is a senior project and delivery leader at Deloitte, writing about execution, leadership, and clarity in complex Agile, AI & Data, and regulated environments." />
-  <meta name="keywords" content="Project Manager, Delivery Leadership, PMP, Agile, Scrum, Deloitte, AI & Data, GxP, PMO, Leadership Newsletter" />
+  <meta name="keywords" content="Project Manager, Delivery Leadership, Agile, Scrum, Deloitte, AI & Data, GxP, PMO, Leadership Newsletter" />
 
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -120,46 +120,26 @@
       margin-bottom: 16px;
     }
 
-    /* Newsletter section highlight */
-    .newsletter-section {
-      background: linear-gradient(135deg, #0b3c5d, #163f63);
-      padding: 40px;
-      border-radius: 18px;
-      color: #ffffff;
-      margin-top: 20px;
-    }
-
-    .newsletter-section h3 {
-      color: #ffffff;
-      margin-top: 0;
-    }
-
-    .newsletter-section p {
-      color: #e5eff7;
-      max-width: 720px;
-    }
-
+    /* Newsletter cards (Version 1 style) */
     .newsletter-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 22px;
-      margin-top: 28px;
+      margin-top: 24px;
     }
 
     .newsletter-card {
-      background: linear-gradient(180deg, #ffffff, #f4f7fb);
-      border-radius: 16px;
+      background-color: #ffffff;
+      border-radius: 14px;
       padding: 22px;
-      color: #1f2933;
-      box-shadow:
-        0 12px 24px rgba(0, 0, 0, 0.15),
-        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .newsletter-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.18);
     }
 
     .newsletter-card h4 {
@@ -173,7 +153,18 @@
     .newsletter-card p {
       font-size: 0.92rem;
       color: #374151;
-      margin-bottom: 0;
+      margin-bottom: 14px;
+    }
+
+    .newsletter-card a {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .newsletter-card a:hover {
+      text-decoration: underline;
     }
 
     .closing {
@@ -243,40 +234,40 @@
     <hr>
 
     <!-- NEWSLETTER -->
-    <section class="newsletter-section">
-      <h3>Newsletter & Writing</h3>
-      <p>
-        I write about delivery leadership, execution discipline,
-        and decision-making in complex environments—grounded in real-world experience,
-        not frameworks alone.
-      </p>
+    <h3>Newsletter & Writing</h3>
+    <p>
+      I write about delivery leadership, execution discipline,
+      and decision-making in complex environments—grounded in real-world experience.
+    </p>
 
-      <div class="newsletter-grid">
-        <div class="newsletter-card">
-          <h4>Why Busy Teams Still Miss Outcomes</h4>
-          <p>
-            Activity does not equal ownership. This piece explores why
-            well-intentioned teams struggle—and how leaders reset focus.
-          </p>
-        </div>
-
-        <div class="newsletter-card">
-          <h4>Clarity Is a Leadership Decision</h4>
-          <p>
-            Ambiguity is rarely accidental. A look at how leaders create—or remove—
-            confusion through everyday decisions.
-          </p>
-        </div>
-
-        <div class="newsletter-card">
-          <h4>Predictability Beats Speed</h4>
-          <p>
-            Why stable delivery systems outperform heroic execution
-            in complex, high-stakes environments.
-          </p>
-        </div>
+    <div class="newsletter-grid">
+      <div class="newsletter-card">
+        <h4>Why Busy Teams Still Miss Outcomes</h4>
+        <p>
+          Activity does not equal ownership. This piece explores why
+          well-intentioned teams struggle—and how leaders reset focus.
+        </p>
+        <a href="#">Read sample →</a>
       </div>
-    </section>
+
+      <div class="newsletter-card">
+        <h4>Clarity Is a Leadership Decision</h4>
+        <p>
+          Ambiguity is rarely accidental. A look at how leaders create—or remove—
+          confusion through everyday decisions.
+        </p>
+        <a href="#">Read sample →</a>
+      </div>
+
+      <div class="newsletter-card">
+        <h4>Predictability Beats Speed</h4>
+        <p>
+          Why stable delivery systems outperform heroic execution
+          in complex, high-stakes environments.
+        </p>
+        <a href="#">Read sample →</a>
+      </div>
+    </div>
 
     <hr>
 
