@@ -376,4 +376,48 @@
         <div>
           <p><strong>Email:</strong> kshirsagarvallabh09@gmail.com</p>
           <p><strong>Phone:</strong> +91 99239 70963</p>
-          <p><strong>Book a Meeting:</strong> (link coming soon)<
+          <p><strong>Book a Meeting:</strong> (link coming soon)</p>
+          <hr>
+          <p>
+            Need guidance on PMP® or Agile certifications, resources,
+            or study strategy? Feel free to reach out or book a meeting.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="cta" onclick="window.open('https://www.linkedin.com','_blank')">
+      Connect on LinkedIn
+    </div>
+    <div class="feedback" onclick="document.getElementById('feedbackModal').style.display='flex'">
+      Send feedback
+    </div>
+  </div>
+</footer>
+
+<div class="overlay" id="feedbackModal">
+  <div class="modal">
+    <h3>Send feedback</h3>
+    <input type="text" placeholder="Your name">
+    <textarea rows="4" placeholder="Your feedback"></textarea>
+    <button onclick="document.getElementById('feedbackModal').style.display='none'">Submit</button>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
