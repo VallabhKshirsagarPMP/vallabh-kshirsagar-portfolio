@@ -6,8 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO -->
-  <meta name="description" content="Vallabh Kshirsagar is a senior project and delivery leader at Deloitte, focused on execution discipline, stakeholder alignment, and predictable outcomes across complex initiatives." />
-  <meta name="keywords" content="Project Manager, Delivery Leadership, Deloitte, Agile, AI & Data, GxP, PMP, Scrum, Leadership Newsletter" />
+  <meta name="description" content="Vallabh Kshirsagar is a project and delivery leader focused on execution discipline, stakeholder alignment, and predictable outcomes across complex initiatives." />
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <!-- Google Ads -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
+  <script>
+    gtag('config', 'AW-XXXXXXXXXX');
+  </script>
 
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,63 +29,38 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: 'Inter', system-ui, sans-serif;
       background: #f4f6fb;
       color: #1f2933;
-      line-height: 1.6;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: #ffffff;
-      border-bottom: 1px solid #e5e7eb;
-    }
-
-    .header-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 16px 20px;
-      display: flex;
-      align-items: center;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      color: #0b3c5d;
+      line-height: 1.65;
     }
 
     /* HERO */
     .hero {
       background: #ffffff;
       padding: 64px 20px 48px;
-    }
-
-    .hero-inner {
-      max-width: 900px;
-      margin: 0 auto;
       text-align: center;
+      animation: fadeIn 0.6s ease;
     }
 
     .hero-photo {
-      width: 160px;
-      height: 160px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
-      background: #e5e7eb;
-      margin: 0 auto 20px;
+      border: 4px solid #0b3c5d;
+      object-fit: contain;
+      background: #ffffff;
+      margin-bottom: 18px;
     }
 
     .hero h1 {
       font-size: 2rem;
       font-weight: 700;
       color: #0b3c5d;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .hero p {
@@ -83,31 +72,40 @@
 
     /* TABS */
     .tabs {
-      background: linear-gradient(135deg, #0b3c5d, #1e5a87);
+      background: #e9edf3;
+      box-shadow: inset 0 -1px 0 #d1d5db;
     }
 
     .tabs-inner {
       max-width: 1100px;
       margin: 0 auto;
       display: flex;
-      overflow-x: auto;
+      gap: 6px;
+      padding: 10px 16px;
+      flex-wrap: wrap;
     }
 
     .tab-btn {
-      flex: 1;
-      padding: 16px;
-      text-align: center;
+      padding: 12px 18px;
       font-weight: 600;
-      font-size: 0.95rem;
-      color: #dbeafe;
+      font-size: 0.9rem;
+      background: #f4f6fb;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
       cursor: pointer;
-      transition: background 0.2s ease;
-      white-space: nowrap;
+      color: #374151;
+      transition: all 0.2s ease;
+    }
+
+    .tab-btn:hover {
+      background: #ffffff;
     }
 
     .tab-btn.active {
-      background: rgba(255, 255, 255, 0.18);
-      color: #ffffff;
+      background: #ffffff;
+      color: #0b3c5d;
+      border-color: #0b3c5d;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
     }
 
     /* CONTENT */
@@ -119,7 +117,7 @@
 
     .tab-content {
       display: none;
-      animation: fadeIn 0.25s ease;
+      animation: slideUp 0.35s ease;
     }
 
     .tab-content.active {
@@ -130,7 +128,7 @@
       background: #ffffff;
       border-radius: 14px;
       padding: 40px;
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 14px 32px rgba(0,0,0,0.1);
     }
 
     .panel h2 {
@@ -138,21 +136,12 @@
       margin-bottom: 16px;
     }
 
-    .panel p {
-      margin-bottom: 14px;
+    .panel p, .panel li {
+      margin-bottom: 12px;
     }
 
     .panel ul {
       padding-left: 18px;
-    }
-
-    .panel li {
-      margin-bottom: 10px;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(6px); }
-      to { opacity: 1; transform: translateY(0); }
     }
 
     /* FOOTER */
@@ -161,40 +150,38 @@
       bottom: 0;
       width: 100%;
       background: #ffffff;
-      border-top: 1px solid #e5e7eb;
-      box-shadow: 0 -8px 20px rgba(0,0,0,0.08);
+      border-top: 1px solid #d1d5db;
+      box-shadow: 0 -6px 20px rgba(0,0,0,0.1);
     }
 
     .footer-inner {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 16px 20px;
+      padding: 14px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 16px;
+      gap: 12px;
       flex-wrap: wrap;
     }
 
-    .footer-cta {
-      padding: 10px 20px;
+    .cta {
       background: #0b3c5d;
       color: #ffffff;
+      padding: 10px 20px;
       border-radius: 999px;
       font-weight: 600;
-      font-size: 0.9rem;
       cursor: pointer;
     }
 
-    .feedback-btn {
-      font-size: 0.9rem;
+    .feedback {
       font-weight: 600;
       color: #0b3c5d;
       cursor: pointer;
     }
 
-    /* FEEDBACK MODAL */
-    .modal-overlay {
+    /* MODAL */
+    .overlay {
       display: none;
       position: fixed;
       inset: 0;
@@ -206,154 +193,90 @@
 
     .modal {
       background: #ffffff;
-      border-radius: 14px;
       padding: 32px;
+      border-radius: 14px;
       width: 90%;
       max-width: 420px;
     }
 
     .modal h3 {
-      margin-bottom: 12px;
       color: #0b3c5d;
+      margin-bottom: 12px;
     }
 
-    .modal input,
-    .modal textarea {
+    .modal input, .modal textarea {
       width: 100%;
       padding: 10px;
       margin-bottom: 12px;
       border-radius: 8px;
       border: 1px solid #d1d5db;
-      font-family: inherit;
     }
 
     .modal button {
-      padding: 10px 16px;
       background: #0b3c5d;
       color: #ffffff;
-      border: none;
+      padding: 10px 16px;
       border-radius: 8px;
+      border: none;
       font-weight: 600;
       cursor: pointer;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <div class="header-inner">
-    VALLABH KSHIRSAGAR
-  </div>
-</header>
-
 <section class="hero">
-  <div class="hero-inner">
-    <div class="hero-photo"></div>
-    <h1>Project & Delivery Leadership</h1>
-    <p>
-      I lead complex initiatives where clarity, accountability,
-      and predictable outcomes matter more than activity.
-    </p>
-  </div>
+  <img src="profile.jpg" alt="Vallabh Kshirsagar" class="hero-photo">
+  <h1>Vallabh Kshirsagar</h1>
+  <p>
+    Project and delivery leader focused on clarity, accountability,
+    and predictable outcomes across complex initiatives.
+  </p>
 </section>
 
 <nav class="tabs">
   <div class="tabs-inner">
     <div class="tab-btn active" data-tab="about">About Me</div>
     <div class="tab-btn" data-tab="resume">Resume</div>
-    <div class="tab-btn" data-tab="services">Services</div>
     <div class="tab-btn" data-tab="newsletter">Newsletter</div>
+    <div class="tab-btn" data-tab="services">Services</div>
     <div class="tab-btn" data-tab="contact">Contact</div>
   </div>
 </nav>
 
 <main>
-  <div id="about" class="tab-content active">
-    <div class="panel">
-      <h2>About Me</h2>
-      <p>
-        I am a senior project and delivery leader with <strong>Deloitte</strong>,
-        supporting complex AI & Data and enterprise transformation initiatives.
-      </p>
-      <p>
-        My work focuses on execution discipline, stakeholder alignment,
-        and delivery predictability in environments where delivery risk is real.
-      </p>
-      <p>
-        Backed by PMP®, CSM®, and CSPO® certifications, I apply Agile and hybrid
-        delivery models pragmatically—based on context, constraints, and outcomes.
-      </p>
-    </div>
-  </div>
-
-  <div id="resume" class="tab-content">
-    <div class="panel">
-      <h2>Resume</h2>
-      <ul>
-        <li>Senior Consultant – AI & Data, Deloitte</li>
-        <li>Senior Project Manager – GxP & Regulated Platforms</li>
-        <li>Portfolio delivery across enterprise and startup environments</li>
-        <li>Strong governance, reporting, and stakeholder leadership</li>
-      </ul>
-      <p>
-        A downloadable resume / PDF can be linked here later.
-      </p>
-    </div>
-  </div>
-
-  <div id="services" class="tab-content">
-    <div class="panel">
-      <h2>Services</h2>
-      <ul>
-        <li>Project & Program Delivery Leadership</li>
-        <li>PMO & Governance Setup</li>
-        <li>Agile / Hybrid Delivery Advisory</li>
-        <li>Delivery Stabilization & Risk Recovery</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="newsletter" class="tab-content">
-    <div class="panel">
-      <h2>Newsletter</h2>
-      <p>
-        I write about delivery leadership, execution discipline,
-        and decision-making in complex environments.
-      </p>
-      <ul>
-        <li>Why Busy Teams Still Miss Outcomes</li>
-        <li>Clarity Is a Leadership Decision</li>
-        <li>Predictability Beats Speed</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="contact" class="tab-content">
-    <div class="panel">
-      <h2>Contact</h2>
-      <p>
-        The preferred way to connect is via LinkedIn.
-      </p>
-    </div>
-  </div>
+  <div id="about" class="tab-content active"><div class="panel">About Me content</div></div>
+  <div id="resume" class="tab-content"><div class="panel">Resume content</div></div>
+  <div id="newsletter" class="tab-content"><div class="panel">Newsletter content</div></div>
+  <div id="services" class="tab-content"><div class="panel">Services content</div></div>
+  <div id="contact" class="tab-content"><div class="panel">Contact content</div></div>
 </main>
 
 <footer>
   <div class="footer-inner">
-    <div class="footer-cta" onclick="window.open('https://www.linkedin.com','_blank')">
+    <div class="cta" onclick="window.open('https://www.linkedin.com','_blank')">
       Connect on LinkedIn
     </div>
-    <div class="feedback-btn" id="openFeedback">
-      Send feedback
-    </div>
+    <div class="feedback" id="openFeedback">Send feedback</div>
   </div>
 </footer>
 
-<div class="modal-overlay" id="feedbackModal">
+<div class="overlay" id="feedbackModal">
   <div class="modal">
     <h3>Send feedback</h3>
-    <input type="text" placeholder="Your name" />
+    <input type="text" placeholder="Your name">
     <textarea rows="4" placeholder="Your feedback"></textarea>
     <button id="closeFeedback">Submit</button>
   </div>
