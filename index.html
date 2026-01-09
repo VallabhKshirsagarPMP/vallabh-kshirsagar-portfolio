@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO -->
-  <meta name="description" content="Vallabh Kshirsagar is a senior project and delivery leader at Deloitte, writing about execution, leadership, and clarity in complex Agile, AI & Data, and regulated environments. PMP, CSM, CSPO." />
-  <meta name="keywords" content="Project Manager, Delivery Leadership, PMP, Agile, Scrum, Deloitte, AI & Data, GxP, PMO, Stakeholder Management, Leadership Newsletter" />
+  <meta name="description" content="Vallabh Kshirsagar is a senior project and delivery leader at Deloitte, writing about execution, leadership, and clarity in complex Agile, AI & Data, and regulated environments." />
+  <meta name="keywords" content="Project Manager, Delivery Leadership, PMP, Agile, Scrum, Deloitte, AI & Data, GxP, PMO, Leadership Newsletter" />
 
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,20 +17,19 @@
   <style>
     body {
       font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
-      max-width: 900px;
+      max-width: 920px;
       margin: 32px auto;
-      line-height: 1.6;
+      line-height: 1.65;
       color: #1f2933;
-      background-color: #f7f9fb;
+      background-color: #f5f7fb;
       padding: 0 16px;
     }
 
     .container {
-      border: 1px solid #dcdcdc;
-      padding: 42px;
-      border-radius: 12px;
       background-color: #ffffff;
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+      border-radius: 14px;
+      padding: 44px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
     }
 
     @media (max-width: 600px) {
@@ -45,7 +44,7 @@
       border-radius: 50%;
       object-fit: contain;
       display: block;
-      margin: 0 auto 22px auto;
+      margin: 0 auto 24px auto;
       border: 4px solid #0b3c5d;
       background-color: #fff;
     }
@@ -53,21 +52,21 @@
     h1 {
       text-align: center;
       color: #0b3c5d;
-      margin-bottom: 6px;
       font-size: 2rem;
       font-weight: 700;
       letter-spacing: -0.02em;
+      margin-bottom: 6px;
     }
 
     h3 {
-      margin-top: 48px;
+      margin-top: 52px;
       color: #0b3c5d;
-      font-size: 1.15rem;
+      font-size: 1.2rem;
       font-weight: 600;
     }
 
     hr {
-      margin: 40px 0;
+      margin: 44px 0;
       border: none;
       border-top: 1px solid #e5e7eb;
     }
@@ -76,26 +75,26 @@
       text-align: center;
       font-weight: 600;
       color: #0b3c5d;
-      margin-bottom: 8px;
       font-size: 0.95rem;
+      margin-bottom: 12px;
     }
 
     .badges {
       display: flex;
       justify-content: center;
-      gap: 14px;
-      margin: 12px 0 20px 0;
+      gap: 16px;
+      margin-bottom: 18px;
     }
 
     .badges img {
-      height: 44px;
-      width: 44px;
+      height: 46px;
+      width: 46px;
     }
 
     .tagline {
       text-align: center;
       max-width: 720px;
-      margin: 0 auto 14px auto;
+      margin: 0 auto 18px auto;
       font-size: 1.05rem;
       font-weight: 500;
       color: #111827;
@@ -107,7 +106,7 @@
       color: #374151;
       display: flex;
       justify-content: center;
-      gap: 18px;
+      gap: 20px;
       flex-wrap: wrap;
     }
 
@@ -117,39 +116,68 @@
       font-weight: 500;
     }
 
-    .highlight {
-      background-color: #f1f6fb;
-      padding: 22px 26px;
-      border-radius: 10px;
+    p {
+      margin-bottom: 16px;
     }
 
-    ul {
-      padding-left: 18px;
-    }
-
-    li {
-      margin-bottom: 10px;
-    }
-
-    /* Newsletter cards */
-    .newsletter-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 18px;
+    /* Newsletter section highlight */
+    .newsletter-section {
+      background: linear-gradient(135deg, #0b3c5d, #163f63);
+      padding: 40px;
+      border-radius: 18px;
+      color: #ffffff;
       margin-top: 20px;
     }
 
-    .newsletter-card {
-      border: 1px solid #e5e7eb;
-      border-radius: 12px;
-      padding: 20px;
-      background: linear-gradient(180deg, #ffffff, #f8fafc);
+    .newsletter-section h3 {
+      color: #ffffff;
+      margin-top: 0;
     }
 
-    /* Closing section */
+    .newsletter-section p {
+      color: #e5eff7;
+      max-width: 720px;
+    }
+
+    .newsletter-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+      margin-top: 28px;
+    }
+
+    .newsletter-card {
+      background: linear-gradient(180deg, #ffffff, #f4f7fb);
+      border-radius: 16px;
+      padding: 22px;
+      color: #1f2933;
+      box-shadow:
+        0 12px 24px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .newsletter-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+    }
+
+    .newsletter-card h4 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.05rem;
+      color: #0b3c5d;
+      font-weight: 600;
+    }
+
+    .newsletter-card p {
+      font-size: 0.92rem;
+      color: #374151;
+      margin-bottom: 0;
+    }
+
     .closing {
-      background: linear-gradient(135deg, #0b3c5d, #1e5a87);
-      color: #ffffff;
+      background-color: #f1f5f9;
       padding: 32px;
       border-radius: 14px;
       text-align: center;
@@ -157,20 +185,9 @@
 
     .closing p {
       max-width: 640px;
-      margin: 0 auto 16px auto;
+      margin: 0 auto;
       font-size: 0.95rem;
-      opacity: 0.95;
-    }
-
-    .closing a {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #ffffff;
-      color: #0b3c5d;
-      border-radius: 999px;
-      font-weight: 600;
-      text-decoration: none;
-      font-size: 0.9rem;
+      color: #1f2933;
     }
   </style>
 </head>
@@ -185,9 +202,9 @@
     <p class="credentials">MBA | PMP® | CSM® | CSPO®</p>
 
     <div class="badges">
-      <img src="pmp-badge.png" alt="PMP Certification">
-      <img src="csm-badge.png" alt="CSM Certification">
-      <img src="cspo-badge.png" alt="CSPO Certification">
+      <img src="pmp-badge.png" alt="PMP">
+      <img src="csm-badge.png" alt="CSM">
+      <img src="cspo-badge.png" alt="CSPO">
     </div>
 
     <p class="tagline">
@@ -202,77 +219,74 @@
 
     <hr>
 
-    <!-- LEADERSHIP POSITIONING -->
-    <h3>Leadership Positioning</h3>
-    <div class="highlight">
-      <ul>
-        <li>I lead delivery when outcomes matter more than activity.</li>
-        <li>I bring structure to ambiguity and calm to high-pressure environments.</li>
-        <li>I believe predictability is a leadership choice, not a planning artifact.</li>
-        <li>I hold myself accountable for decisions, trade-offs, and results.</li>
-      </ul>
-    </div>
-
-    <hr>
-
     <!-- ABOUT ME -->
     <h3>About Me</h3>
     <p>
       I am a senior project and delivery leader with <strong>Deloitte</strong>,
       supporting complex AI & Data and enterprise transformation initiatives.
-      My work focuses on aligning execution discipline with stakeholder intent
-      in environments where delivery risk is real.
+      My work focuses on execution discipline, stakeholder alignment,
+      and delivery predictability in environments where outcomes matter.
     </p>
 
     <p>
       Backed by <strong>PMP®, CSM®, and CSPO®</strong> certifications,
-      I apply Agile and hybrid frameworks pragmatically—based on context,
-      constraints, and business outcomes rather than theory.
+      I apply Agile and hybrid delivery models pragmatically—balancing governance,
+      speed, and risk based on context rather than theory.
     </p>
 
     <p>
       I have led cross-functional teams in regulated (GxP) and fast-evolving environments,
-      partnering with senior leaders to restore delivery predictability,
-      governance clarity, and execution confidence.
+      helping organizations restore structure, confidence, and execution clarity
+      when delivery pressure is high.
     </p>
 
     <hr>
 
     <!-- NEWSLETTER -->
-    <h3>Newsletter & Writing</h3>
-    <p>
-      I write about delivery leadership, execution discipline,
-      and decision-making in complex environments—grounded in real-world experience.
-    </p>
+    <section class="newsletter-section">
+      <h3>Newsletter & Writing</h3>
+      <p>
+        I write about delivery leadership, execution discipline,
+        and decision-making in complex environments—grounded in real-world experience,
+        not frameworks alone.
+      </p>
 
-    <div class="newsletter-grid">
-      <div class="newsletter-card">
-        <h4>Why Busy Teams Still Miss Outcomes</h4>
-        <p>Activity vs ownership—and how leaders restore focus.</p>
+      <div class="newsletter-grid">
+        <div class="newsletter-card">
+          <h4>Why Busy Teams Still Miss Outcomes</h4>
+          <p>
+            Activity does not equal ownership. This piece explores why
+            well-intentioned teams struggle—and how leaders reset focus.
+          </p>
+        </div>
+
+        <div class="newsletter-card">
+          <h4>Clarity Is a Leadership Decision</h4>
+          <p>
+            Ambiguity is rarely accidental. A look at how leaders create—or remove—
+            confusion through everyday decisions.
+          </p>
+        </div>
+
+        <div class="newsletter-card">
+          <h4>Predictability Beats Speed</h4>
+          <p>
+            Why stable delivery systems outperform heroic execution
+            in complex, high-stakes environments.
+          </p>
+        </div>
       </div>
-      <div class="newsletter-card">
-        <h4>Clarity Is a Leadership Decision</h4>
-        <p>Why ambiguity is often a choice, not an accident.</p>
-      </div>
-      <div class="newsletter-card">
-        <h4>Predictability Beats Speed</h4>
-        <p>Why stable systems outperform heroic execution.</p>
-      </div>
-    </div>
+    </section>
 
     <hr>
 
-    <!-- STRONG CLOSE -->
+    <!-- CLOSING -->
     <div class="closing">
       <p>
-        I believe strong delivery leadership is quiet, disciplined,
-        and outcome-driven. If you care about clarity over chaos,
-        predictability over heroics, and ownership over activity,
-        you’ll likely find my work useful.
+        Strong delivery leadership is quiet, disciplined, and outcome-driven.
+        If you value clarity over chaos and ownership over activity,
+        you’ll find my work relevant.
       </p>
-      <a href="https://www.linkedin.com/in/vallabhkshirsagar" target="_blank">
-        Follow my work on LinkedIn →
-      </a>
     </div>
 
   </div>
