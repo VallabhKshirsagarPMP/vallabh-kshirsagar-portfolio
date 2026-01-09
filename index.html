@@ -15,27 +15,51 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --primary: #0b3c5d;
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --border: #e5e7eb;
+      --text: #1f2933;
+      --muted: #6b7280;
+    }
+
     body {
-      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+      font-family: 'Inter', system-ui, sans-serif;
       max-width: 920px;
       margin: 32px auto;
-      line-height: 1.65;
-      color: #1f2933;
-      background-color: #f5f7fb;
       padding: 0 16px;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
     }
 
     .container {
-      background-color: #ffffff;
+      background: var(--card);
       border-radius: 14px;
       padding: 44px;
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.08);
     }
 
     @media (max-width: 600px) {
-      .container {
-        padding: 26px;
-      }
+      .container { padding: 26px; }
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      width: 140px;
+      height: 6px;
+      background: linear-gradient(90deg, transparent, var(--primary), transparent);
+      display: block;
+      margin: 28px auto 0;
+      border-radius: 999px;
+      opacity: 0.35;
     }
 
     .profile-photo {
@@ -43,47 +67,38 @@
       height: 190px;
       border-radius: 50%;
       object-fit: contain;
+      margin: 0 auto 24px;
+      border: 4px solid var(--primary);
+      background: #fff;
       display: block;
-      margin: 0 auto 24px auto;
-      border: 4px solid #0b3c5d;
-      background-color: #fff;
     }
 
     h1 {
-      text-align: center;
-      color: #0b3c5d;
       font-size: 2rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
+      color: var(--primary);
       margin-bottom: 6px;
+      font-weight: 700;
     }
 
     h3 {
-      margin-top: 52px;
-      color: #0b3c5d;
+      margin-top: 56px;
       font-size: 1.2rem;
-      font-weight: 600;
+      color: var(--primary);
     }
 
-    hr {
-      margin: 44px 0;
-      border: none;
-      border-top: 1px solid #e5e7eb;
-    }
+    p { margin-bottom: 16px; }
 
     .credentials {
-      text-align: center;
       font-weight: 600;
-      color: #0b3c5d;
       font-size: 0.95rem;
-      margin-bottom: 12px;
+      color: var(--primary);
     }
 
     .badges {
       display: flex;
       justify-content: center;
       gap: 16px;
-      margin-bottom: 18px;
+      margin: 14px 0;
     }
 
     .badges img {
@@ -92,35 +107,51 @@
     }
 
     .tagline {
-      text-align: center;
       max-width: 720px;
-      margin: 0 auto 18px auto;
-      font-size: 1.05rem;
+      margin: 18px auto;
+      font-size: 1.08rem;
       font-weight: 500;
-      color: #111827;
     }
 
     .contact {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #374151;
       display: flex;
       justify-content: center;
       gap: 20px;
+      font-size: 0.9rem;
       flex-wrap: wrap;
     }
 
     .contact a {
-      color: #0b3c5d;
-      text-decoration: none;
+      color: var(--primary);
       font-weight: 500;
+      text-decoration: none;
     }
 
-    p {
-      margin-bottom: 16px;
+    /* DIVIDER */
+    .section-divider {
+      height: 1px;
+      background: linear-gradient(to right, transparent, #d1d5db, transparent);
+      margin: 56px 0;
     }
 
-    /* Newsletter cards (Version 1 style) */
+    /* HIGHLIGHTS */
+    .highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .highlight {
+      background: #f8fafc;
+      padding: 18px;
+      border-radius: 12px;
+      font-size: 0.92rem;
+      font-weight: 500;
+      border-left: 4px solid var(--primary);
+    }
+
+    /* NEWSLETTER */
     .newsletter-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -129,46 +160,46 @@
     }
 
     .newsletter-card {
-      background-color: #ffffff;
+      background: #fff;
       border-radius: 14px;
       padding: 22px;
-      border: 1px solid #e5e7eb;
-      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.12);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .newsletter-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.18);
+      box-shadow: 0 16px 34px rgba(0,0,0,0.18);
     }
 
     .newsletter-card h4 {
-      margin-top: 0;
-      margin-bottom: 10px;
+      margin: 0 0 10px;
+      color: var(--primary);
       font-size: 1.05rem;
-      color: #0b3c5d;
-      font-weight: 600;
     }
 
     .newsletter-card p {
       font-size: 0.92rem;
       color: #374151;
-      margin-bottom: 14px;
     }
 
     .newsletter-card a {
       font-size: 0.9rem;
       font-weight: 600;
-      color: #2563eb;
+      color: #111827;
       text-decoration: none;
+      display: inline-block;
+      transition: transform 0.2s ease;
     }
 
-    .newsletter-card a:hover {
-      text-decoration: underline;
+    .newsletter-card:hover a {
+      transform: translateX(4px);
     }
 
+    /* CLOSING */
     .closing {
-      background-color: #f1f5f9;
+      background: #f1f5f9;
       padding: 32px;
       border-radius: 14px;
       text-align: center;
@@ -178,7 +209,18 @@
       max-width: 640px;
       margin: 0 auto;
       font-size: 0.95rem;
-      color: #1f2933;
+    }
+
+    /* SCROLL REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: all 0.6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
@@ -186,93 +228,91 @@
 <body>
   <div class="container">
 
-    <!-- HERO -->
-    <img src="profile.jpg" alt="Vallabh Kshirsagar" class="profile-photo">
+    <div class="hero reveal">
+      <img src="profile.jpg" alt="Vallabh Kshirsagar" class="profile-photo">
+      <h1>Vallabh Kshirsagar</h1>
+      <p class="credentials">MBA | PMP® | CSM® | CSPO®</p>
 
-    <h1>Vallabh Kshirsagar</h1>
-    <p class="credentials">MBA | PMP® | CSM® | CSPO®</p>
-
-    <div class="badges">
-      <img src="pmp-badge.png" alt="PMP">
-      <img src="csm-badge.png" alt="CSM">
-      <img src="cspo-badge.png" alt="CSPO">
-    </div>
-
-    <p class="tagline">
-      Project and delivery leader who brings clarity, accountability,
-      and predictable outcomes to complex, high-impact initiatives.
-    </p>
-
-    <p class="contact">
-      <a href="mailto:kshirsagarvallabh09@gmail.com">Email</a>
-      <a href="https://www.linkedin.com/in/vallabhkshirsagar" target="_blank">LinkedIn</a>
-    </p>
-
-    <hr>
-
-    <!-- ABOUT ME -->
-    <h3>About Me</h3>
-    <p>
-      I am a senior project and delivery leader with <strong>Deloitte</strong>,
-      supporting complex AI & Data and enterprise transformation initiatives.
-      My work focuses on execution discipline, stakeholder alignment,
-      and delivery predictability in environments where outcomes matter.
-    </p>
-
-    <p>
-      Backed by <strong>PMP®, CSM®, and CSPO®</strong> certifications,
-      I apply Agile and hybrid delivery models pragmatically—balancing governance,
-      speed, and risk based on context rather than theory.
-    </p>
-
-    <p>
-      I have led cross-functional teams in regulated (GxP) and fast-evolving environments,
-      helping organizations restore structure, confidence, and execution clarity
-      when delivery pressure is high.
-    </p>
-
-    <hr>
-
-    <!-- NEWSLETTER -->
-    <h3>Newsletter & Writing</h3>
-    <p>
-      I write about delivery leadership, execution discipline,
-      and decision-making in complex environments—grounded in real-world experience.
-    </p>
-
-    <div class="newsletter-grid">
-      <div class="newsletter-card">
-        <h4>Why Busy Teams Still Miss Outcomes</h4>
-        <p>
-          Activity does not equal ownership. This piece explores why
-          well-intentioned teams struggle—and how leaders reset focus.
-        </p>
-        <a href="#">Read sample →</a>
+      <div class="badges">
+        <img src="pmp-badge.png" alt="PMP">
+        <img src="csm-badge.png" alt="CSM">
+        <img src="cspo-badge.png" alt="CSPO">
       </div>
 
-      <div class="newsletter-card">
-        <h4>Clarity Is a Leadership Decision</h4>
-        <p>
-          Ambiguity is rarely accidental. A look at how leaders create—or remove—
-          confusion through everyday decisions.
-        </p>
-        <a href="#">Read sample →</a>
-      </div>
+      <p class="tagline">
+        Project and delivery leader who brings clarity, accountability,
+        and predictable outcomes to complex, high-impact initiatives.
+      </p>
 
-      <div class="newsletter-card">
-        <h4>Predictability Beats Speed</h4>
-        <p>
-          Why stable delivery systems outperform heroic execution
-          in complex, high-stakes environments.
-        </p>
-        <a href="#">Read sample →</a>
+      <div class="contact">
+        <a href="mailto:kshirsagarvallabh09@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/vallabhkshirsagar" target="_blank">LinkedIn</a>
       </div>
     </div>
 
-    <hr>
+    <div class="section-divider"></div>
 
-    <!-- CLOSING -->
-    <div class="closing">
+    <div class="reveal">
+      <h3>About Me</h3>
+      <p>
+        I am a senior project and delivery leader with <strong>Deloitte</strong>,
+        supporting complex AI & Data and enterprise transformation initiatives.
+        My work focuses on execution discipline, stakeholder alignment,
+        and delivery predictability in environments where outcomes matter.
+      </p>
+
+      <p>
+        I apply Agile and hybrid delivery models pragmatically—balancing governance,
+        speed, and risk based on context rather than theory.
+      </p>
+
+      <p>
+        I have led cross-functional teams in regulated (GxP) and fast-evolving environments,
+        helping organizations restore structure, confidence, and execution clarity
+        when delivery pressure is high.
+      </p>
+
+      <div class="highlights">
+        <div class="highlight">Enterprise & AI-driven delivery programs</div>
+        <div class="highlight">Regulated (GxP) environments</div>
+        <div class="highlight">Agile, hybrid & governance-led execution</div>
+        <div class="highlight">Stakeholder alignment under pressure</div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="reveal">
+      <h3>Newsletter & Writing</h3>
+      <p>
+        I write about delivery leadership, execution discipline,
+        and decision-making in complex environments.
+      </p>
+
+      <div class="newsletter-grid">
+        <div class="newsletter-card">
+          <h4>Why Busy Teams Still Miss Outcomes</h4>
+          <p>Activity does not equal ownership. Why focus gets lost—and how leaders reset it.</p>
+          <a href="#">Read →</a>
+        </div>
+
+        <div class="newsletter-card">
+          <h4>Clarity Is a Leadership Decision</h4>
+          <p>Ambiguity is rarely accidental. Leaders either create clarity—or chaos.</p>
+          <a href="#">Read →</a>
+        </div>
+
+        <div class="newsletter-card">
+          <h4>Predictability Beats Speed</h4>
+          <p>Why stable delivery systems outperform heroic execution.</p>
+          <a href="#">Read →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="closing reveal">
       <p>
         Strong delivery leadership is quiet, disciplined, and outcome-driven.
         If you value clarity over chaos and ownership over activity,
@@ -281,5 +321,18 @@
     </div>
 
   </div>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
