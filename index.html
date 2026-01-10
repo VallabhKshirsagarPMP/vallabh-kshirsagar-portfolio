@@ -51,7 +51,7 @@
       align-items: start;
     }
 
-    /* LEFT PANE */
+    /* ================= LEFT PANE (LOCKED) ================= */
     .left-pane {
       background: #ffffff;
       border-radius: 18px;
@@ -102,7 +102,6 @@
       transform: translateY(-3px);
     }
 
-    /* CURRENT FOCUS */
     .focus {
       text-align: left;
       margin-bottom: 26px;
@@ -118,7 +117,6 @@
 
     .focus ul {
       list-style: none;
-      padding-left: 0;
     }
 
     .focus li {
@@ -127,7 +125,6 @@
       border-bottom: 1px solid #e5e7eb;
     }
 
-    /* ACTIONS */
     .left-actions {
       margin-top: 26px;
       display: flex;
@@ -142,21 +139,15 @@
       border-radius: 999px;
       font-weight: 600;
       cursor: pointer;
-      text-align: center;
     }
 
     .secondary-btn {
       font-weight: 600;
       color: #0b3c5d;
       cursor: pointer;
-      text-align: center;
     }
 
-    .secondary-btn:hover {
-      text-decoration: underline;
-    }
-
-    /* RIGHT PANE */
+    /* ================= RIGHT PANE ================= */
     .tabs {
       display: flex;
       gap: 12px;
@@ -173,7 +164,6 @@
       border-radius: 999px;
       cursor: pointer;
       color: #374151;
-      transition: all 0.25s ease;
     }
 
     .tab-btn.active {
@@ -201,23 +191,77 @@
       margin-bottom: 28px;
     }
 
-    /* MODAL */
-    .overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.5);
-      z-index: 2000;
-      align-items: center;
-      justify-content: center;
+    .panel h2 {
+      color: #0b3c5d;
+      margin-bottom: 18px;
     }
 
-    .modal {
+    /* ABOUT TILES */
+    .tiles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 24px;
+    }
+
+    .tile {
+      background: linear-gradient(135deg, #f8fafc, #ffffff);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+      text-align: center;
+    }
+
+    .tile strong {
+      font-size: 1.6rem;
+      color: #0b3c5d;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    /* NEWSLETTER */
+    .newsletter-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+      margin-top: 20px;
+    }
+
+    .newsletter-card {
       background: #ffffff;
-      padding: 32px;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.14);
+      transition: transform 0.2s ease;
+    }
+
+    .newsletter-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .newsletter-card h4 {
+      color: #0b3c5d;
+      margin-bottom: 8px;
+    }
+
+    .newsletter-card a {
+      font-weight: 600;
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    /* CONTACT */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 260px;
+      border: none;
       border-radius: 14px;
-      width: 90%;
-      max-width: 420px;
     }
 
     @keyframes fadeUp {
@@ -226,13 +270,8 @@
     }
 
     @media (max-width: 900px) {
-      .layout {
-        grid-template-columns: 1fr;
-      }
-      .left-pane {
-        position: relative;
-        top: 0;
-      }
+      .layout { grid-template-columns: 1fr; }
+      .left-pane { position: relative; }
     }
   </style>
 </head>
@@ -268,14 +307,13 @@
         <div class="primary-btn" onclick="window.open('https://www.linkedin.com','_blank')">
           Connect on LinkedIn
         </div>
-        <div class="secondary-btn" id="openFeedback">
-          Send feedback
-        </div>
+        <div class="secondary-btn">Send feedback</div>
       </div>
     </aside>
 
     <!-- RIGHT PANE -->
     <section>
+
       <nav class="tabs">
         <div class="tab-btn active" data-tab="about">About Me</div>
         <div class="tab-btn" data-tab="resume">Resume</div>
@@ -283,33 +321,81 @@
         <div class="tab-btn" data-tab="contact">Contact</div>
       </nav>
 
+      <!-- ABOUT -->
       <div id="about" class="tab-content active">
-        <div class="panel">About Me content</div>
+        <div class="panel">
+          <h2>About Me</h2>
+          <p>
+            Senior Project & Delivery Leader with experience across Agile, Hybrid,
+            AI & Data programs, GxP-regulated environments, PMO governance,
+            and enterprise transformation.
+          </p>
+
+          <div class="tiles">
+            <div class="tile"><strong>8+</strong>Years Experience</div>
+            <div class="tile"><strong>25+</strong>Projects Delivered</div>
+            <div class="tile"><strong>Multi-Industry</strong>Healthcare, Manufacturing, Telecom</div>
+            <div class="tile"><strong>AI & Data</strong>Enterprise Programs</div>
+          </div>
+        </div>
       </div>
 
+      <!-- RESUME -->
       <div id="resume" class="tab-content">
-        <div class="panel">Resume content</div>
+        <div class="panel">
+          <h2>Resume Snapshot</h2>
+          <p><strong>Certifications:</strong> PMP®, CSM®, CSPO®, Lean Six Sigma Green Belt, Azure Fundamentals</p>
+          <p><strong>Tools:</strong> Jira, Confluence, Azure DevOps, MS Project, Power BI, Excel</p>
+          <p><strong>Methods:</strong> Agile, Scrum, Hybrid, Waterfall, PMO Governance</p>
+          <p><strong>Education:</strong> MBA – MIT WPU Pune | B.E. Mechanical – University of Pune</p>
+        </div>
       </div>
 
+      <!-- NEWSLETTER -->
       <div id="newsletter" class="tab-content">
-        <div class="panel">Newsletter content</div>
+        <div class="panel">
+          <h2>Newsletter</h2>
+          <div class="newsletter-grid">
+            <div class="newsletter-card">
+              <h4>Why Busy Teams Still Miss Outcomes</h4>
+              <p>Activity vs ownership in delivery systems.</p>
+              <a href="#">Read →</a>
+            </div>
+            <div class="newsletter-card">
+              <h4>Clarity Is a Leadership Decision</h4>
+              <p>How ambiguity is often a choice.</p>
+              <a href="#">Read →</a>
+            </div>
+            <div class="newsletter-card">
+              <h4>Predictability Beats Speed</h4>
+              <p>Why stable systems outperform heroics.</p>
+              <a href="#">Read →</a>
+            </div>
+          </div>
+        </div>
       </div>
 
+      <!-- CONTACT -->
       <div id="contact" class="tab-content">
-        <div class="panel">Contact content</div>
+        <div class="panel">
+          <h2>Contact</h2>
+          <div class="contact-grid">
+            <iframe src="https://maps.google.com/maps?q=Pune%2C%20India&t=&z=11&ie=UTF8&iwloc=&output=embed"></iframe>
+            <div>
+              <p><strong>Email:</strong> kshirsagarvallabh09@gmail.com</p>
+              <p><strong>Phone:</strong> +91 99239 70963</p>
+              <p><strong>Book a Meeting:</strong> (link coming soon)</p>
+              <hr>
+              <p>
+                Need guidance on PMP® or Agile certifications, resources,
+                or study strategy? Feel free to reach out or book a meeting.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
+
     </section>
-
-  </div>
-</div>
-
-<!-- FEEDBACK MODAL -->
-<div class="overlay" id="feedbackModal">
-  <div class="modal">
-    <h3>Send feedback</h3>
-    <input type="text" placeholder="Your name" style="width:100%;margin-bottom:12px;">
-    <textarea rows="4" placeholder="Your feedback" style="width:100%;margin-bottom:12px;"></textarea>
-    <button onclick="document.getElementById('feedbackModal').style.display='none'">Submit</button>
   </div>
 </div>
 
@@ -322,9 +408,6 @@
       document.getElementById(btn.dataset.tab).classList.add('active');
     });
   });
-
-  document.getElementById('openFeedback').onclick = () =>
-    document.getElementById('feedbackModal').style.display = 'flex';
 </script>
 
 </body>
