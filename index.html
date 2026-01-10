@@ -4,8 +4,7 @@
   <meta charset="UTF-8" />
   <title>Vallabh Kshirsagar | Project & Delivery Leadership</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <meta name="description" content="Vallabh Kshirsagar is a senior project and delivery leader experienced in Agile, AI & Data, GxP environments, PMO governance, and enterprise transformation." />
+  <meta name="description" content="Senior Project & Delivery Leader with 8+ years of experience across AI & Data, technology transformation, Agile delivery, and enterprise programs." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -73,7 +72,7 @@
       margin-bottom: 22px;
     }
 
-    .badges img { width: 42px; height: 42px; }
+    .badges img { width: 42px; }
 
     .focus {
       text-align: left;
@@ -81,11 +80,11 @@
     }
 
     .focus h3 {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       color: #0b3c5d;
-      margin-bottom: 10px;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
+      margin-bottom: 8px;
+      letter-spacing: 0.05em;
     }
 
     .focus ul { list-style: none; }
@@ -96,15 +95,15 @@
     }
 
     .left-actions {
-      margin-top: 26px;
       display: flex;
       flex-direction: column;
       gap: 12px;
+      margin-top: 24px;
     }
 
     .primary-btn {
       background: #0b3c5d;
-      color: #ffffff;
+      color: #fff;
       padding: 12px;
       border-radius: 999px;
       font-weight: 600;
@@ -112,12 +111,12 @@
     }
 
     .secondary-btn {
-      font-weight: 600;
       color: #0b3c5d;
+      font-weight: 600;
       cursor: pointer;
     }
 
-    /* RIGHT PANE */
+    /* RIGHT */
     .tabs {
       display: flex;
       gap: 12px;
@@ -128,17 +127,14 @@
     .tab-btn {
       padding: 12px 22px;
       font-weight: 600;
-      font-size: 0.9rem;
       background: #e9edf3;
-      border: 1px solid #d1d5db;
       border-radius: 999px;
       cursor: pointer;
     }
 
     .tab-btn.active {
-      background: #ffffff;
+      background: #fff;
       color: #0b3c5d;
-      border-color: #0b3c5d;
       box-shadow: 0 6px 18px rgba(0,0,0,0.15);
     }
 
@@ -146,102 +142,85 @@
     .tab-content.active { display: block; }
 
     .panel {
-      background: #ffffff;
+      background: #fff;
       border-radius: 18px;
       padding: 42px;
       box-shadow: 0 14px 34px rgba(0,0,0,0.12);
       margin-bottom: 28px;
     }
 
-    /* CONTACT TAB (unchanged) */
-    .contact-grid {
+    h2 { color: #0b3c5d; margin-bottom: 16px; }
+
+    /* ABOUT TILES */
+    .tiles {
       display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 28px;
-      margin-bottom: 32px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 24px;
     }
 
+    .tile {
+      background: linear-gradient(135deg, #0b3c5d, #1f4f75);
+      color: #fff;
+      border-radius: 16px;
+      padding: 28px;
+      text-align: center;
+    }
+
+    .tile strong {
+      font-size: 1.8rem;
+      display: block;
+    }
+
+    /* RESUME */
+    .resume-section { margin-bottom: 28px; }
+
+    .resume-section h3 {
+      color: #0b3c5d;
+      margin-bottom: 10px;
+    }
+
+    .tool {
+      margin-bottom: 10px;
+    }
+
+    .bar {
+      height: 8px;
+      border-radius: 4px;
+      background: #e5e7eb;
+      overflow: hidden;
+    }
+
+    .fill {
+      height: 100%;
+      background: #0b3c5d;
+    }
+
+    /* NEWSLETTER */
+    .newsletter-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+    }
+
+    .newsletter-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.14);
+    }
+
+    /* CONTACT (kept stable) */
     iframe {
       width: 100%;
       height: 260px;
+      border-radius: 14px;
       border: none;
-      border-radius: 14px;
-    }
-
-    .contact-cards {
-      display: grid;
-      gap: 18px;
-    }
-
-    .contact-card {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 16px 18px;
-      border-radius: 14px;
-      background: #f8fafc;
-      border: 1px solid #e5e7eb;
-    }
-
-    .icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: #0b3c5d;
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-      font-weight: 700;
-    }
-
-    .contact-card a {
-      color: #0b3c5d;
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    .service-tile {
-      background: linear-gradient(135deg, #f8fafc, #ffffff);
-      border-radius: 18px;
-      padding: 32px;
-      box-shadow: 0 14px 32px rgba(0,0,0,0.12);
-    }
-
-    .service-actions {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .filled-btn {
-      padding: 10px 16px;
-      border-radius: 999px;
-      background: #0b3c5d;
-      color: #ffffff;
-      font-weight: 600;
-      text-align: center;
-      cursor: pointer;
-      text-decoration: none;
-    }
-
-    .outline-btn {
-      padding: 10px 16px;
-      border-radius: 999px;
-      border: 1px solid #0b3c5d;
-      color: #0b3c5d;
-      font-weight: 600;
-      text-align: center;
-      cursor: pointer;
-      text-decoration: none;
     }
 
     @media (max-width: 900px) {
       .layout { grid-template-columns: 1fr; }
       .left-pane { position: relative; }
-      .contact-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -251,7 +230,7 @@
 <div class="page">
   <div class="layout">
 
-    <!-- LEFT PANE -->
+    <!-- LEFT -->
     <aside class="left-pane">
       <img src="profile.jpg" class="profile-photo">
       <h1>Vallabh Kshirsagar</h1>
@@ -279,7 +258,7 @@
       </div>
     </aside>
 
-    <!-- RIGHT PANE -->
+    <!-- RIGHT -->
     <section>
 
       <nav class="tabs">
@@ -293,15 +272,58 @@
       <div id="about" class="tab-content active">
         <div class="panel">
           <h2>About Me</h2>
-          <p>About Me content here.</p>
+          <p>
+            Project & Delivery Leader with 8+ years of experience across technology
+            and transformation initiatives. Currently working at Deloitte on AI & Data
+            programs, delivering predictable execution through structured governance
+            and adaptive Agile practices.
+          </p>
+
+          <div class="tiles">
+            <div class="tile"><strong id="exp">0</strong>Years Experience</div>
+            <div class="tile"><strong id="proj">0</strong>Projects Delivered</div>
+            <div class="tile"><strong>AI & Data</strong>Transformation Programs</div>
+          </div>
         </div>
       </div>
 
       <!-- RESUME -->
       <div id="resume" class="tab-content">
         <div class="panel">
-          <h2>Resume</h2>
-          <p>Resume content here.</p>
+
+          <div class="resume-section">
+            <h3>Experience</h3>
+            <p><strong>Senior Consultant – Deloitte</strong></p>
+            <p>Enterprise AI & Data delivery, stakeholder alignment, governance</p>
+            <p><strong>Additional Projects:</strong></p>
+            <ul>
+              <li>SAE Baja Competition – Cross-functional engineering project</li>
+              <li>ARDE (DRDO) Project – Confidential defense initiative</li>
+            </ul>
+          </div>
+
+          <div class="resume-section">
+            <h3>Certifications</h3>
+            <ul>
+              <li>PMP®</li>
+              <li>CSM®</li>
+              <li>CSPO®</li>
+              <li>Lean Six Sigma Green Belt</li>
+              <li>Microsoft Azure Fundamentals</li>
+            </ul>
+          </div>
+
+          <div class="resume-section">
+            <h3>Tools & Proficiency</h3>
+
+            <div class="tool">Jira<div class="bar"><div class="fill" style="width:90%"></div></div></div>
+            <div class="tool">Azure DevOps<div class="bar"><div class="fill" style="width:85%"></div></div></div>
+            <div class="tool">Confluence<div class="bar"><div class="fill" style="width:85%"></div></div></div>
+            <div class="tool">MS Project<div class="bar"><div class="fill" style="width:80%"></div></div></div>
+            <div class="tool">Power BI<div class="bar"><div class="fill" style="width:75%"></div></div></div>
+
+          </div>
+
         </div>
       </div>
 
@@ -309,7 +331,11 @@
       <div id="newsletter" class="tab-content">
         <div class="panel">
           <h2>Newsletter</h2>
-          <p>Newsletter content here.</p>
+          <div class="newsletter-grid">
+            <div class="newsletter-card">Why Busy Teams Still Miss Outcomes</div>
+            <div class="newsletter-card">Clarity Is a Leadership Decision</div>
+            <div class="newsletter-card">Predictability Beats Speed</div>
+          </div>
         </div>
       </div>
 
@@ -317,54 +343,7 @@
       <div id="contact" class="tab-content">
         <div class="panel">
           <h2>Contact</h2>
-
-          <div class="contact-grid">
-            <iframe src="https://maps.google.com/maps?q=Pune%2C%20India&t=&z=11&ie=UTF8&iwloc=&output=embed"></iframe>
-
-            <div class="contact-cards">
-              <div class="contact-card">
-                <div class="icon">✉</div>
-                <div>
-                  <div>Email</div>
-                  <a href="mailto:kshirsagarvallabh09@gmail.com">
-                    kshirsagarvallabh09@gmail.com
-                  </a>
-                </div>
-              </div>
-
-              <div class="contact-card">
-                <div class="icon">📱</div>
-                <div>
-                  <div>Phone</div>
-                  <a href="tel:+919923970963">
-                    +91 99239 70963
-                  </a>
-                </div>
-              </div>
-
-              <div class="contact-card">
-                <div class="icon">💬</div>
-                <div>
-                  <div>Google Chat</div>
-                  <a href="https://chat.google.com/" target="_blank">
-                    Chat on Google
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="service-tile">
-            <h3>Certification & Career Guidance</h3>
-            <p>Guidance on PMP® and Agile certifications and curated study material.</p>
-
-            <div class="service-actions">
-              <a href="#" class="filled-btn">Book a Meeting</a>
-              <a href="#" class="outline-btn">PMP Study Material & Cheat Sheets</a>
-              <a href="#" class="outline-btn">Request Material</a>
-            </div>
-          </div>
-
+          <iframe src="https://maps.google.com/maps?q=Pune%2C%20India&t=&z=11&output=embed"></iframe>
         </div>
       </div>
 
@@ -373,15 +352,25 @@
 </div>
 
 <script>
+  // Tabs
   document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
       document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-
       btn.classList.add('active');
       document.getElementById(btn.dataset.tab).classList.add('active');
     });
   });
+
+  // Counter animation
+  let exp = document.getElementById("exp");
+  let proj = document.getElementById("proj");
+  let i = 0, j = 0;
+  let interval = setInterval(() => {
+    if (i < 8) exp.innerText = ++i;
+    if (j < 25) proj.innerText = ++j;
+    if (i === 8 && j === 25) clearInterval(interval);
+  }, 80);
 </script>
 
 </body>
