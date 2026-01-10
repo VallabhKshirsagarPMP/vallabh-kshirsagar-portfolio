@@ -153,7 +153,7 @@
       margin-bottom: 28px;
     }
 
-    /* CONTACT TAB */
+    /* CONTACT TAB (unchanged) */
     .contact-grid {
       display: grid;
       grid-template-columns: 1.2fr 1fr;
@@ -283,13 +283,38 @@
     <section>
 
       <nav class="tabs">
-        <div class="tab-btn">About Me</div>
-        <div class="tab-btn">Resume</div>
-        <div class="tab-btn">Newsletter</div>
-        <div class="tab-btn active">Contact</div>
+        <div class="tab-btn active" data-tab="about">About Me</div>
+        <div class="tab-btn" data-tab="resume">Resume</div>
+        <div class="tab-btn" data-tab="newsletter">Newsletter</div>
+        <div class="tab-btn" data-tab="contact">Contact</div>
       </nav>
 
-      <div class="tab-content active">
+      <!-- ABOUT -->
+      <div id="about" class="tab-content active">
+        <div class="panel">
+          <h2>About Me</h2>
+          <p>About Me content here.</p>
+        </div>
+      </div>
+
+      <!-- RESUME -->
+      <div id="resume" class="tab-content">
+        <div class="panel">
+          <h2>Resume</h2>
+          <p>Resume content here.</p>
+        </div>
+      </div>
+
+      <!-- NEWSLETTER -->
+      <div id="newsletter" class="tab-content">
+        <div class="panel">
+          <h2>Newsletter</h2>
+          <p>Newsletter content here.</p>
+        </div>
+      </div>
+
+      <!-- CONTACT -->
+      <div id="contact" class="tab-content">
         <div class="panel">
           <h2>Contact</h2>
 
@@ -331,10 +356,7 @@
 
           <div class="service-tile">
             <h3>Certification & Career Guidance</h3>
-            <p>
-              Guidance on PMP® and Agile certifications, preparation strategy,
-              and curated study material.
-            </p>
+            <p>Guidance on PMP® and Agile certifications and curated study material.</p>
 
             <div class="service-actions">
               <a href="#" class="filled-btn">Book a Meeting</a>
@@ -349,6 +371,18 @@
     </section>
   </div>
 </div>
+
+<script>
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+    });
+  });
+</script>
 
 </body>
 </html>
